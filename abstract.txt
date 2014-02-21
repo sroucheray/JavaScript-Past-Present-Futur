@@ -1,0 +1,16 @@
+JavaScript, past, present, future
+
+S'il existe des liens avec d'autres langages de programmation, JavaScript reste unique sur bien des aspects.
+
+Livré avec le logiciel le plus utilisé au monde, un simple raccourci clavier le dévoile complètement.
+Il est, de facto, LE langage du web : ouvert, lisible, analysable, hackable.
+
+JavaScript est aussi "le langage de programmation le plus incompris au monde"*. Prototypage, mauvaises documentations, implémentations multiples découragent bien souvent les esprits cartésiens des développeurs professionnels.
+
+Mais aujourd'hui, une petite révolution est en marche. JavaScript, le corps du langage, évolue. Les comités écoutent la communauté et tentent de pallier ses défauts de jeunesse.
+
+JavaScript à 18 ans, que nous réserve son avenir ?
+
+* Douglas Crockford JavaScript Architect, Paypal
+http://javascript.crockford.com/javascript.html
+

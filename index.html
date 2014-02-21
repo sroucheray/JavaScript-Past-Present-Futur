@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript - Past, Present, Future</title>
+
+		<meta name="description" content="A presentation about the JavaScript language - 2014">
+		<meta name="author" content="@sroucheray">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/js-talk.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>JavaScript</h1>
+					<h3>Past, Present, Future</h3>
+				</section>
+
+				<section id="release">
+<h2>JavaScript public release</h2>
+					<div>
+
+<figure>
+	<img src="img/brendan.jpg" width="120" alt="Brenda Eich" class="logo">
+	<figcaption><a href="http://brendaneich.com/">Brendan Eich</a></figcaption>
+</figure>
+
+					 <span>&nbsp;+&nbsp;</span>
+<figure>
+	<img src="img/netscape.png" alt="Netscape" class="logo">
+	<figcaption>Netscape<small>†</small></figcaption>
+</figure>
+					 <span>&nbsp;+&nbsp;</span>
+<figure>
+	<img src="img/sun.png" alt="Sun Microsystem" class="logo"></p>
+	<figcaption>Sun<small>†</small></figcaption>
+</figure>
+					</div>
+
+
+					<br>
+					<blockquote class="js-blockquote" cite="http://web.archive.org/web/20020606002913/http:/wp.netscape.com/newsref/pr/newsrelease67.html">
+						<p>A complement to Java</p>
+						<p>for easy online application development</p>
+					</blockquote>
+					<br>
+					<p><a href="http://web.archive.org/web/20020606002913/http:/wp.netscape.com/newsref/pr/newsrelease67.html"><time>December 4, 1995</time></a></p>
+				</section>
+
+				<section id="history">
+					<h2>History (1996 - 2006)</h2>
+					<p>
+						<dl>
+							<dt>1996</dt>
+							<dd>Microsoft : JScript</dd><!--
+							<dd>Standardization starts at <abbr title="European Computer Manufacturers Association">ECMA</abbr></dd>
+							<dd>1<span class="exposant">st</span> browsers war <br> <br></dd> -->
+						</dl>
+						<dl>
+							<dt>1997</dt>
+							<dd>IE4/NN4 : DOM (DHTML)</dd>
+							<dd>ECMAScript<br></dd>
+						</dl>
+						<dl>
+							<dt>1999</dt>
+							<dd>IE5 : XMLHttpRequest (AJAX)</dd>
+							<dd>ES3 ~= JS1.5</dd>
+							<dd>Adobe : ActionScript</dd>
+						</dl>
+						<dl>
+							<dt>2001 - 2006</dt>
+							<dd><img src="img/ie6.png" alt="IE6"  class="logo" width="100" /></dd>
+						</dl>
+						<dl>
+							<dt>2004</dt>
+							<dd><img src="img/firefox_128x128.png" alt="Firefox" width="100" class="logo"></dd>
+						</dl>
+					</p>
+				</section><!--
+				<section id="flash">
+					<h2>2006 : Adobe FlashPlayer 9 <img src="img/flash.png" width="100" alt="Flash Player" class="logo"></h2>
+				    				<p>ActionScript 3 based on <em>ECMAScript 4</em></p>
+					<p class="fragment">ECMAScript 4 : abandonned standard</p>
+				</section> -->
+
+				<section id="chrome">
+					<h2>2008 : Google Chrome</h2>
+					<p><img src="img/chrome_128x128.png" alt="Chrome" class="logo"></p>
+					<p>Built on <a href="https://code.google.com/p/v8/">V8</a> JavaScript engine</p>
+					<p>Browsers war focuses on JavaScript engine <a href="http://arewefastyet.com/">speed</a></p>
+				</section>
+				<section id="es5">
+					<h2>2009 : ECMAScript 5</h2>
+					<p>ES5 is mostly a compatibility version (ES4 was abandonned)</p>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/ECMAScript_5_support_in_Mozilla#Added_in_JavaScript_1.8.1_%28Gecko_1.9.1.2C_Firefox_3.5%29"><code>JSON</code></a> support</li>
+						<li>New <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.6#Array_extras"><code>Array</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/ECMAScript_5_support_in_Mozilla#Added_in_JavaScript_1.8.1_%28Gecko_1.9.1.2C_Firefox_3.5%29"><code>Object</code></a> methods</li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode"><code>"use strict"</code></a> to convert mistakes into errors</li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"><code>Function.prototype.bind</code></a></li>
+					</ul><!--
+					<p><img src="img/es5-compat.png" alt="es5"></p> -->
+				</section>
+				<!-- <section id="kraken">
+					<h2>2009 : JavaScript out of the browser</h2>
+					<p><img src="img/kraken.jpg" alt="Kraken" class="logo"></p>
+				</section> -->
+				<section id="nodejs">
+					<h2>2009 : JavaScript out of the browser</h2>
+					<h3>NodeJS : to rule them all</h3>
+					<p>
+						<ul>
+						    <li>Based on <a href="https://code.google.com/p/v8/">V8</a></li>
+						    <li>No browser extensions / No (native) <a href="https://npmjs.org/package/node-dom">DOM</a></li>
+						    <li>Built-in extensions (<a href="http://nodejs.org/api/http.html">HTTP</a>, <a href="http://nodejs.org/api/fs.html">File</a>, <a href="http://nodejs.org/api/stream.html">Streams</a>, <a href="http://nodejs.org/api/">...</a>)</li>
+						    <li><a href="https://npmjs.org/">NPM</a> : Node package manager (~54&nbsp;000&nbsp;packages)</li>
+						</ul>
+					</p>
+				</section>
+				<section id="key-concepts">
+					<h2>JavaScript : 3 Key concepts</h2>
+					<ul>
+						<li>Functional</li>
+						<li>Inheritance</li>
+						<li><code>this</code> value</li>
+					</ul>
+				</section>
+				<section id="functionnal">
+					<h2>Key concepts : <span class="lowcase">Functionnal language</span></h2>
+					<ul>
+						<li style="left: -0.6em; list-style: none outside none; position: relative;">Functions...</li>
+						<li>... are objects with executable code</li>
+						<li>... can be anywhere an Object can be</li>
+						<li>... can be factory of objects when constructors</li>
+						<li>... can be passed as parameters to other functions</li>
+						<li>... behavior can be adjusted at execution time</li>
+					</ul>
+				</section>
+				<section id="inheritance">
+					<h2>Key concepts : <span class="lowcase"> inheritance</span></h2>
+					<p>JavaScript does not use <code>classical</code> inheritance</p>
+					<p>JavaScript uses <code>Prototype</code> inheritance</p>
+					<p>You should <a href="http://ejohn.org/apps/learn/#64">learn</a> <code>Prototype</code> inheritance</p>
+				</section>
+				<section id="prototype">
+					<h2>Key concepts : <span class="lowcase">prototype inheritance</span></h2>
+<ul style="width: 75%; list-style-type: none;">
+	<li>
+<small>Gentleman prototyping</small>
+<pre><code data-trim class="javascript unmax">
+function Gentleman(){};
+
+Gentleman.prototype.sayHello = function(){
+  console.log("Hello Sir");
+}
+</code></pre>
+	</li>
+	<li>
+<small>Gentleman instantiating</small>
+<pre><code data-trim class="javascript unmax">
+var gentleman = new Gentleman();
+
+gentleman.sayHello(); // 'Hello Sir'
+</code></pre>
+	</li>
+	<li>
+<small>Prototype modification</small>
+<pre><code data-trim class="javascript unmax">
+Gentleman.prototype.sayHello = function(){
+  console.log("What's up dude ?");
+}
+</code></pre>
+	</li>
+	<li>
+<small>Modification apply to existing instance</small>
+<pre><code data-trim class="javascript unmax">
+gentleman.sayHello(); // What's up dude ?
+</code></pre>
+	</li>
+</ul>
+
+				</section>
+				<section>
+					<section id="this">
+						<h2>Key concepts : <span class="lowcase"><code>this</code> value</span></h2>
+					<pre><code data-trim class="javascript">
+function foo(){
+  console.log(this); // What is `this` ?
+} // Looking at this, we can't say.
+</code></pre>
+						<div>
+							<p>The value of <code>this</code> in a function</p>
+							<p>only depends on its <u><a href="#/invocations">invocation mode<small class="super">*</small></a></u></p>
+							<p>not on its declaration</p>
+							<br><br>
+							<p><small>* There are 4 invocations modes</small></p>
+						 </div>
+					</section>
+					<section id="invocations">
+						<h2>Key concepts : <span class="lowcase"><code>this</code> value</span></h2>
+	<ul style="width: 75%; list-style-type: none;">
+	<li><small>As a function </small><pre><code data-trim class="javascript">foo(); //this === window</code></pre></li>
+	<li><small>As a method </small><pre><code data-trim class="javascript">bar.foo(); //this === bar</code></pre></li>
+	<li><small>As&nbsp;a&nbsp;constructor </small><pre><code data-trim class="javascript">new foo(); //this === [new built and returned object]</code></pre></li>
+	<li><small>With <code>call</code> &amp; <code>apply</code> </small><pre><code data-trim class="javascript unmax">
+	foo.call(baz); //this === baz
+	foo.apply(baz); //this === baz</code></pre></li>
+	</ul>
+
+				 <p class="fragment"><small>Exceptions : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.protoype.bind</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/arrow_functions">Arrow function expressions</a></small></p>
+					</section>
+				</section>
+				<section id="other-concepts">
+					<h2>Other key concepts</h2>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals">Dynamic typing</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Description">Global scope</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">Variable scope</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">hoisting</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures">Closure</a></li>
+						<li>... and <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide">much more</a></li>
+					</ul>
+				</section>
+				<section id="es6">
+					<h2>2014 : ECMAScript 6</h2>
+					<ul>
+						<li>Code name <a href="http://wiki.ecmascript.org/doku.php?id=harmony:proposals">Harmony</a></li>
+						<li>Target publication date : December 2014</li>
+						<li>Upgrades JS to fit other modern languages</li>
+						<li>Brings new powers to developers</li>
+					</ul>
+					<br>
+					<br>
+					<br>
+					<p>Some features already available</p>
+					<ul>
+						<li>... in some <a href="http://kangax.github.io/es5-compat-table/es6/">browsers</a></li>
+						<li>... in NodeJS : <code>node --harmony</code></li>
+					</ul>
+				</section>
+				<section id="news">
+					<h2>ES6 : New features' pick list</h2>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Destructuring_assignment_%28Merge_into_own_page.2Fsection%29">Destructuring assignement</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Generators</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/arrow_functions">Arrow functions</a></li>
+						<li><a href="http://www.2ality.com/2013/07/es6-modules.html">Modules</a></li>
+					</ul>
+				</section>
+				<section id="destructuring">
+					<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Destructuring_assignment_%28Merge_into_own_page.2Fsection%29">Destructuring assignement</a></h2>
+					<p>Extract data from arrays or objects using a syntax that mirrors<br>the construction of array and object literals</p>
+					<pre><code data-trim class="javascript unmax">
+var a, b;
+
+[a, b] = [1, 2];
+// a === 1
+// b === 2
+
+[a, b] = [b, a];
+// a === 2
+// b === 1
+
+[a, ,b] = ["v", "w", "x"];
+// a === "v"
+// b === "x"
+
+</code></pre>
+				</section>
+				<section>
+					<section id="generators">
+						<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Generators</a></h2>
+						<!-- <p>Generators are factory for Iterators</p> -->
+						<p>Special functions that generate iterators</p>
+						<p><code>yield</code> provoke partial returns</p>
+						<p>Can be resume with <code>next</code> method</p>
+						<pre><code data-trim class="javascript unmax">
+function* greatGenerator(){
+  yield "ClermonTech";
+  yield "is great";
+  for (var i = 0; i < 3; i++){
+    yield i*2;
+  }
+}
+
+var iterator = greatGenerator();
+iterator.next(); // "ClermonTech"
+iterator.next(); // "is great"
+iterator.next(); // 0
+iterator.next(); // 2
+</code></pre>
+					</section>
+					<section>
+						<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">Generators</a></h2>
+						<p>Generators introduce a new expression syntax</p>
+						<pre><code data-trim class="javascript unmax">
+//Generator of positive integers iterator
+function* posIntGenerator(){
+    var value = 0;
+    while (true){
+        yield value++;
+    }
+}
+
+var posIntIterator = posIntGenerator();
+
+// New expression syntax below
+var posIntBy2Iterator = (anInt * 2 for (anInt in posIntIterator));
+
+posIntBy2Iterator.next(); // 0
+posIntBy2Iterator.next(); // 2
+posIntBy2Iterator.next(); // 4
+posIntBy2Iterator.next(); // 6</code></pre>
+					</section>
+
+				</section>
+				<section>
+					<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/arrow_functions">Arrow functions</a></h2>
+					<p>Arrow function expressions<br>are like function expressions<br>with shorter syntax <br>+ it binds <code>this</code> value</p>
+					<pre><code data-trim class="javascript unmax">
+// This is an anomous function
+function(){};
+
+// No parameter, returns undefined
+() => {};
+
+// No parameter, returns "foo"
+() => "foo"
+
+// Single parameter, returns double
+a => a * 2
+
+// Two parameters, returns sum
+(a, b) => a + b
+
+					</code></pre>
+				</section>
+				<section>
+					<h2>ES6 : <a href="http://www.2ality.com/2013/07/es6-modules.html">Modules</a></h2>
+					<p>There was no built-in module concept in JavaScript</p>
+					<p>...but two standards :</p>
+					<ul>
+						<li><abbr title="Asynchronous Module Definition">AMD</abbr> for browsers (<a href="http://requirejs.org/">RequireJS</a>)</li>
+						<li>CommonJS : for <a href="http://nodejs.org/api/modules.html">Node</a></li>
+					</ul>
+					<p><br>...unfortunately they are not compatible</p>
+					<p>ES6 introduces another format</p>
+					<p>Trying to fill the gap</p>
+				</section>
+
+
+				<section>
+					<h2>ES6 : <a href="http://www.2ality.com/2013/07/es6-modules.html">Modules</a></h2>
+					<p>Module definition</p>
+					<pre><code data-trim class="javascript unmax">
+// calculator/lib/calc.js
+const A_NOT_EXPORTED_CONSTANT = 7;
+
+function multiply(x) {
+    return x * A_NOT_EXPORTED_CONSTANT;
+}
+
+// Public object exported
+module.exports = {
+    multiply: multiply
+};
+</code></pre>
+<p>Module import</p>
+<pre><code data-trim class="javascript unmax">
+// calculator/main.js
+import { multiply } from 'lib/calc';
+console.log(multiply(3));
+</code></pre>
+<p class="fragment">Plus the new <code>&lt;module&gt;</code> tag for the browser</p>
+<p><small>Example from <a href="http://www.2ality.com/2013/07/es6-modules.html">http://www.2ality.com/2013/07/es6-modules.html</a></small></p>
+				</section>
+				<section>
+					<h2>ES6 : <a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">Class</a></h2>
+					<p><code>Class</code> keyword but still <code>Prototype</code> inheritance</p>
+					<p>Sugar syntax to replace framework machinery</p>
+					<pre class="fragment"><code data-trim class="javascript unmax">
+class Gentleman extends Dude {
+    constructor(name) {
+      super(name);
+      this.sayHello();
+    }
+
+    sayHello() {
+      console.log('Hello Sir');
+    };
+  }
+}</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Other ES6 features</h2>
+							<ul>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operators</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/default_parameters">Default parameters</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:quasis">Quasi Literals</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:typed_objects">Typed Object</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">more Math methods</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">Class</a></li>
+								<li><a href="http://www.promisejs.org/">Promises</a></li>
+							</ul>
+					</section>
+<section id="spread">
+					<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operators</a></h2>
+					<p>Expression expands in places<br>where multiple elements are expected</p>
+					<pre><code data-trim class="javascript unmax">function sum(a, b, c, d) {
+  return a + b + c + d;
+}
+
+var expandable = [4, 12, 7, 19];
+sum(...expandable); // 42
+
+var expandable2 = [-5, 8];
+sum(1, ...expandable2, 20); // 24
+
+var expandable3 = [...expandable, ...expandable2];
+//[4, 12, 7, 19, -5, 8]
+</code></pre>
+				</section>
+
+
+					<section>
+						<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></h2>
+						<p>Brings block scope variables and constantes</p>
+						<pre><code data-trim class="javascript unmax">if (x) {
+  let foo;
+  const bar = 10;
+  // `foo` and `bar` are defined inside the if block
+
+  bar = 11; // Error
+  //the value of `bar` cannot change
+}
+</code></pre>
+					</section>
+					<section>
+						<h2>ES6 : <a class="lowcase" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/default_parameters">default parameters</a></h2>
+						<p>You (may) used to write</p>
+						<pre><code data-trim class="javascript unmax">function f(name, age) {
+  age = age || 18;
+}</code></pre>
+						<p>You will write</p>
+						<pre><code data-trim class="javascript unmax">function f(name, age = 18) {
+}</code></pre>
+					</section>
+					<section>
+						<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a></h2>
+						<p>Representation of an indefinite number<br>of tailing arguments as an array</p>
+						<pre class="fragment"><code data-trim class="javascript unmax">
+function sum(a, b, ...args) {
+  //args is an Array
+  var restSum = args.reduce(function(prev, current){
+    return prev + current;
+  }, 0);
+
+  return a + b + restSum;
+}
+
+sum(1, 2);        // 3
+sum(1, 2, 8);     // 11
+sum(1, 2, 8, 12); // 23
+					</code></pre>
+					</section>
+				<section>
+					<h2>ES6 : <a href="http://www.promisejs.org/">Promises</a></h2>
+					<p>Until now promises were provided by libraries<br>( <a href="http://api.jquery.com/category/deferred-object/">jQuery</a>, <a href="https://github.com/kriskowal/q">Q</a>, <a href="https://github.com/petkaantonov/bluebird">Bluebird</a>)</p>
+					<p class="fragment">Promises are built-in ES6, they :</p>
+					<ul class="fragment">
+						<li>Resolve asynchronous calls concurrency</li>
+						<li>Simplify complex asynchronous code</li>
+						<li>Help to adhere the 1<span class="exposant">st</span> rule of <a href="http://williamdurand.fr/object-calisthenics-slides/#/2">object calisthenics</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a></h2>
+					<p>Proxies can change the default behavior <br>of an object</p>
+					<pre><code data-trim class="javascript unmax">
+var proxyTraps = {
+  get: function(obj, prop) {
+    return 42;
+  }
+};
+
+var person = new Proxy({ age : 100 }, proxyTraps);
+console.log(person.age); // 42
+person.age = 18;
+console.log(person.age); // 42
+</code></pre>
+<br>
+<div>
+	<p>The <code>proxyTraps.get</code> is a 'trap' method</p>
+	<p>There are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#Handler_API">many others</a> available</p>
+	<p>Useful for data validation, sanitization, dynamic code analysis...</p>
+</div>
+				</section>
+					<section>
+						<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a></h2>
+						<p>Maps and WeakMaps are key/value maps</p>
+						<p class="fragment">Where keys are objects</p>
+						<p class="fragment">≠ JS native object : keys are string</p>
+						<pre class="fragment"><code data-trim class="javascript unmax">
+var wm = new WeakMap(),
+    trivialeObject = {
+      'Clermont' : 'Ferrand'
+    };
+
+wm.set(trivialeObject, 42);
+wm.get(trivialeObject);    // 42
+wm.has(trivialeObject);    // true
+wm.delete(trivialeObject);
+wm.has(trivialeObject);    // false
+</code></pre>
+					</section>
+					<section>
+					<h2>ES6 : <a href="http://www.promisejs.org/">Promises</a></h2>
+					<p>An example from jQuery with AJAX calls</p>
+
+					<pre><code data-trim class="javascript unmax">
+$.getJSON('customers.json', function(customers){
+  $.getJSON('products.json', function(products){
+    console.log('We have ' + products.length + ' products');
+    console.log('and' + customers.length + ' customers');
+  });
+});
+//Synchronous sequence of async calls : bad pattern
+					</code></pre>
+					<pre class="fragment"><code data-trim class="javascript unmax">
+var customersPromise = $.getJSON('customers.json'); //Returns a promise
+var productsPromise = $.getJSON('products.json'); //Returns another promise
+
+$.when(customersPromise, productsPromise)
+ .then(function(customers, products){
+    // Called only if both promises are resolved
+    console.log('We have ' + products.length + ' products');
+    console.log('and' + customers.length + ' customers');
+});
+					</code></pre>
+				</section>
+
+				</section>
+				<section>
+					<h2>... but ES6 is already old story</h2>
+					<p>ES7 is coming next...</p>
+					<ul class="fragment">
+						<li><a href="http://fr.slideshare.net/BrendanEich/value-objects2">Value Objects</a></li>
+						<li><a href="https://github.com/johnmccutchan/ecmascript_simd"><abbr title="Single Instruction, Multiple Data">SIMD</abbr></a></li>
+						<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe"><code>Object.observe</code></a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Where is JavaScript ?</h2>
+					<p class="fragment">In your shell with <a href="http://nodejs.org">NodeJS</a>,</p>
+					<p class="fragment">in your OS with <a href="http://msdn.microsoft.com/en-us/library/windows/apps/br211385.aspx">Windows Store App</a> or <a href="https://github.com/rogerwang/node-webkit">Node webkit</a>,</p>
+					<p class="fragment">in your mobile with <a href="http://phonegap.com/">PhoneGap</a>, <a href="http://www.mozilla.org/en-US/firefox/os/">FirefoxOS</a>, <a href="https://www.tizen.org">Tizen</a>,</p>
+					<p class="fragment">in your <a href="http://t.co/tFVYecFNC2">things</a> with <a href="https://github.com/rwaldron/johnny-five">Arduino</a> or <a href="http://beagleboard.org/support/bonescript">BeagleBone</a>,</p>
+					<p class="fragment">and in your websites, back and front, with a <a href="https://npmjs.org/">huge</a> <a href="http://bower.io/search/">ecosystem</a>.</p>
+				</section>
+
+
+				<section>
+					<h2>Cool ! But... where is the doc ?</h2>
+					<p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></p>
+					<p class="fragment">Don't forget to type <code>mdn</code> when Googling</p>
+					<div class="twopics fragment">
+						<div>
+							<span>Bad</span>
+							<img src="img/google-without-mdn.png" alt="">
+						</div>&nbsp;
+						<div>
+							<span>Good</span>
+							<img src="img/google-with-mdn.png" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Questions ?</h2>
+					<p><a href="https://twitter.com/sroucheray"><img src="img/twitter-logo.png" alt="@sroucheray on twitter" class="logo social-logo"></a>&nbsp;<a href="https://github.com/sroucheray"><img src="img/github-logo.png" alt="@sroucheray on github" class="logo social-logo"></a></p>
+					<p><a href="https://twitter.com/sroucheray">@sroucheray</a></p>
+					<br>
+					<p>Our community</p>
+					<p><a href="https://twitter.com/ClermontJS"><img src="img/clermont-js.png" width="100" alt="@ClermontJS on twitter"></a><br><a href="https://twitter.com/ClermontJS">@ClermontJS</a></p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<script src="js/js-talk.js"></script>
+
+	</body>
+</html>

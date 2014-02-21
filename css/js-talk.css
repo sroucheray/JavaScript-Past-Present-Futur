@@ -1,0 +1,102 @@
+.reveal section .logo {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/* Quote Mark Styles */
+.js-blockquote:before, .js-blockquote:after {
+    display: block;
+    font-size: 500%;
+    width: 50px;
+}
+
+/* Left Quote */
+.js-blockquote:before {
+    content: open-quote;
+    height: 0;
+    margin-left: -5%;
+    margin-top: 5%;
+}
+
+/* Right Quote */
+.js-blockquote:after {
+    content: close-quote;
+    height: 50px;
+    margin-top: 0;
+    margin-left: 95%;
+}
+
+blockquote.js-blockquote {
+    display: block;
+    quotes: inherit;
+}
+
+
+dt{
+    float: left;
+    clear:both;
+    padding-top: 1em;
+    width:20%;
+    text-align: right;
+}
+
+dd{
+    float:right;
+    width:70%;
+    text-align: left;
+}
+
+.reveal .js-list-left{
+    text-align: left;
+    padding-left: 375px;
+}
+
+.reveal pre code.unmax{
+    max-height: none;
+}
+
+.reveal .lowcase{
+  text-transform: none;
+}
+
+.reveal .slides section .lowpacity{
+    opacity: 0.3;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.reveal section .social-logo{
+    height: 60px;
+    padding: 17px;
+}
+
+.reveal .exposant{
+    font-variant:lowercase;
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+.reveal small.midsmall{
+    vertical-align: inherit;
+}
+
+.reveal .twopics{
+    width:1100px;
+}
+
+.reveal .twopics div{
+    display:inline-block;
+}
+
+.reveal .twopics img{
+    display:block;
+}
+
+.reveal figure{
+    display: inline-block;
+}
