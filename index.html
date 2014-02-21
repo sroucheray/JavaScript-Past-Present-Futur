@@ -39,6 +39,7 @@
 				<section>
 					<h1>JavaScript</h1>
 					<h3>Past, Present, Future</h3>
+					<p><a href="http://git.io/UrP6TQ">http://git.io/UrP6TQ</a></p>
 				</section>
 
 				<section id="release">
@@ -89,7 +90,7 @@
 						<dl>
 							<dt>1999</dt>
 							<dd>IE5 : XMLHttpRequest (AJAX)</dd>
-							<dd>ES3 ~= JS1.5</dd>
+							<dd>ECMAScript3 (~JS 1.5)</dd>
 							<dd>Adobe : ActionScript</dd>
 						</dl>
 						<dl>
@@ -149,15 +150,15 @@
 						<li><code>this</code> value</li>
 					</ul>
 				</section>
-				<section id="functionnal">
-					<h2>Key concepts : <span class="lowcase">Functionnal language</span></h2>
+				<section id="functional">
+					<h2>Key concepts : <span class="lowcase">Functional language</span></h2>
+					<p>Functions...</p>
 					<ul>
-						<li style="left: -0.6em; list-style: none outside none; position: relative;">Functions...</li>
-						<li>... are objects with executable code</li>
-						<li>... can be anywhere an Object can be</li>
-						<li>... can be factory of objects when constructors</li>
-						<li>... can be passed as parameters to other functions</li>
-						<li>... behavior can be adjusted at execution time</li>
+						<li>Inherit from <code>Object</code> + own executable code</li>
+						<li>Can be wherever an <code>Object</code> can be</li>
+						<li>Can be parameter of other functions</li>
+						<li>Are factory of objects when constructors : <code>new</code> operator</li>
+						<li>Behavior can be adjusted at execution time</li>
 					</ul>
 				</section>
 				<section id="inheritance">
@@ -299,7 +300,7 @@ var a, b;
 						<p>Can be resume with <code>next</code> method</p>
 						<pre><code data-trim class="javascript unmax">
 function* greatGenerator(){
-  yield "ClermonTech";
+  yield "Clermont'ech";
   yield "is great";
   for (var i = 0; i < 3; i++){
     yield i*2;
@@ -307,7 +308,7 @@ function* greatGenerator(){
 }
 
 var iterator = greatGenerator();
-iterator.next(); // "ClermonTech"
+iterator.next(); // "Clermont'ech"
 iterator.next(); // "is great"
 iterator.next(); // 0
 iterator.next(); // 2
@@ -397,11 +398,29 @@ console.log(multiply(3));
 <p class="fragment">Plus the new <code>&lt;module&gt;</code> tag for the browser</p>
 <p><small>Example from <a href="http://www.2ality.com/2013/07/es6-modules.html">http://www.2ality.com/2013/07/es6-modules.html</a></small></p>
 				</section>
+
 				<section>
+					<section>
+						<h2>Other ES6 features</h2>
+							<ul>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">Class</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operators</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/default_parameters">Default parameters</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:quasis">Quasi Literals</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:typed_objects">Typed Object</a></li>
+								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">more Math methods</a></li>
+								<li><a href="http://www.promisejs.org/">Promises</a></li>
+							</ul>
+					</section>
+					<section id="class">
 					<h2>ES6 : <a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">Class</a></h2>
 					<p><code>Class</code> keyword but still <code>Prototype</code> inheritance</p>
 					<p>Sugar syntax to replace framework machinery</p>
-					<pre class="fragment"><code data-trim class="javascript unmax">
+					<pre><code data-trim class="javascript unmax">
 class Gentleman extends Dude {
     constructor(name) {
       super(name);
@@ -414,24 +433,6 @@ class Gentleman extends Dude {
   }
 }</code></pre>
 				</section>
-
-				<section>
-					<section>
-						<h2>Other ES6 features</h2>
-							<ul>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operators</a></li>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/default_parameters">Default parameters</a></li>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters">Rest parameters</a></li>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a></li>
-								<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a></li>
-								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:quasis">Quasi Literals</a></li>
-								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:typed_objects">Typed Object</a></li>
-								<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:more_math_functions">more Math methods</a></li>
-								<li><a href="http://wiki.ecmascript.org/doku.php?id=strawman:maximally_minimal_classes">Class</a></li>
-								<li><a href="http://www.promisejs.org/">Promises</a></li>
-							</ul>
-					</section>
 <section id="spread">
 					<h2>ES6 : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">Spread operators</a></h2>
 					<p>Expression expands in places<br>where multiple elements are expected</p>
@@ -570,9 +571,9 @@ $.when(customersPromise, productsPromise)
 
 				</section>
 				<section>
-					<h2>... but ES6 is already old story</h2>
+					<h2>ES6 is already old story</h2>
 					<p>ES7 is coming next...</p>
-					<ul class="fragment">
+					<ul>
 						<li><a href="http://fr.slideshare.net/BrendanEich/value-objects2">Value Objects</a></li>
 						<li><a href="https://github.com/johnmccutchan/ecmascript_simd"><abbr title="Single Instruction, Multiple Data">SIMD</abbr></a></li>
 						<li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe"><code>Object.observe</code></a></li>
@@ -580,26 +581,29 @@ $.when(customersPromise, productsPromise)
 				</section>
 				<section>
 					<h2>Where is JavaScript ?</h2>
-					<p class="fragment">In your shell with <a href="http://nodejs.org">NodeJS</a>,</p>
-					<p class="fragment">in your OS with <a href="http://msdn.microsoft.com/en-us/library/windows/apps/br211385.aspx">Windows Store App</a> or <a href="https://github.com/rogerwang/node-webkit">Node webkit</a>,</p>
-					<p class="fragment">in your mobile with <a href="http://phonegap.com/">PhoneGap</a>, <a href="http://www.mozilla.org/en-US/firefox/os/">FirefoxOS</a>, <a href="https://www.tizen.org">Tizen</a>,</p>
-					<p class="fragment">in your <a href="http://t.co/tFVYecFNC2">things</a> with <a href="https://github.com/rwaldron/johnny-five">Arduino</a> or <a href="http://beagleboard.org/support/bonescript">BeagleBone</a>,</p>
-					<p class="fragment">and in your websites, back and front, with a <a href="https://npmjs.org/">huge</a> <a href="http://bower.io/search/">ecosystem</a>.</p>
+					<p>In your shell with <a href="http://nodejs.org">NodeJS</a>,</p>
+					<p>in your OS with <a href="http://msdn.microsoft.com/en-us/library/windows/apps/br211385.aspx">Windows Store App</a> or <a href="https://github.com/rogerwang/node-webkit">Node webkit</a>,</p>
+					<p>in your mobile with <a href="http://phonegap.com/">PhoneGap</a>, <a href="http://www.mozilla.org/en-US/firefox/os/">FirefoxOS</a>, <a href="https://www.tizen.org">Tizen</a>,</p>
+					<p>in your <a href="http://t.co/tFVYecFNC2">things</a> with <a href="https://github.com/rwaldron/johnny-five">Arduino</a> or <a href="http://beagleboard.org/support/bonescript">BeagleBone</a>,</p>
+					<p>in the code compiled from C++, Java, C#... via <a href="https://github.com/kripken/emscripten/wiki">Emcripten</a>,</p>
+					<p>and in your websites, back and front, with a <a href="https://npmjs.org/">huge</a> <a href="http://bower.io/search/">ecosystem</a>.</p>
 				</section>
 
 
 				<section>
 					<h2>Cool ! But... where is the doc ?</h2>
-					<p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></p>
-					<p class="fragment">Don't forget to type <code>mdn</code> when Googling</p>
-					<div class="twopics fragment">
-						<div>
-							<span>Bad</span>
-							<img src="img/google-without-mdn.png" alt="">
-						</div>&nbsp;
-						<div>
-							<span>Good</span>
-							<img src="img/google-with-mdn.png" alt="">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a></p>
+					<div class="fragment">
+						<p>Don't forget to type <code>mdn</code> when Googling</p>
+						<div class="twopics">
+							<div>
+								<span>Bad</span>
+								<img src="img/google-without-mdn.png" alt="">
+							</div>&nbsp;
+							<div>
+								<span>Good</span>
+								<img src="img/google-with-mdn.png" alt="">
+							</div>
 						</div>
 					</div>
 				</section>
